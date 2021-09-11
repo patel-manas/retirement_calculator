@@ -100,7 +100,11 @@ export const FactsForm = () => {
         } else {
           setErrorTexts({ ...errorTexts, [id]: "" });
         }
+        break;
       }
+
+      default:
+        return null;
     }
   };
 
@@ -118,7 +122,7 @@ export const FactsForm = () => {
             label="Name"
             defaultValue={name}
             inputRef={nameRef}
-            error={errorTexts.name != "" ? true : false}
+            error={errorTexts.name !== "" ? true : false}
             helperText={errorTexts.name}
             onBlur={validationHandler}
           />
@@ -131,7 +135,7 @@ export const FactsForm = () => {
             label="Email"
             defaultValue={email}
             inputRef={emailRef}
-            error={errorTexts.email != "" ? true : false}
+            error={errorTexts.email !== "" ? true : false}
             helperText={errorTexts.email}
             onBlur={validationHandler}
           />
@@ -146,7 +150,7 @@ export const FactsForm = () => {
               shrink: true,
             }}
             inputRef={dobRef}
-            error={errorTexts.dob != "" ? true : false}
+            error={errorTexts.dob !== "" ? true : false}
             helperText={errorTexts.dob}
             onBlur={validationHandler}
           />
@@ -159,7 +163,7 @@ export const FactsForm = () => {
             label="Age"
             defaultValue={age}
             inputRef={ageRef}
-            error={errorTexts.age != "" ? true : false}
+            error={errorTexts.age !== "" ? true : false}
             helperText={errorTexts.age}
             onBlur={validationHandler}
           />
@@ -172,7 +176,7 @@ export const FactsForm = () => {
             label="Retirement Age "
             defaultValue={retirementAge}
             inputRef={r_ageRef}
-            error={errorTexts.retirementAge != "" ? true : false}
+            error={errorTexts.retirementAge !== "" ? true : false}
             helperText={errorTexts.retirementAge}
             onBlur={validationHandler}
           />
@@ -185,7 +189,7 @@ export const FactsForm = () => {
             label="Salary(p/a)"
             defaultValue={salary}
             inputRef={salaryRef}
-            error={errorTexts.salary != "" ? true : false}
+            error={errorTexts.salary !== "" ? true : false}
             helperText={errorTexts.salary}
             onBlur={validationHandler}
           />
@@ -198,7 +202,7 @@ export const FactsForm = () => {
             label="Monthly Expence"
             defaultValue={currentExpense}
             inputRef={currentExpenceRef}
-            error={errorTexts.currentExpense != "" ? true : false}
+            error={errorTexts.currentExpense !== "" ? true : false}
             helperText={errorTexts.currentExpense}
             onBlur={validationHandler}
           />
@@ -211,7 +215,7 @@ export const FactsForm = () => {
             label="Expected ROI"
             defaultValue={roi}
             inputRef={roiRef}
-            error={errorTexts.roi != "" ? true : false}
+            error={errorTexts.roi !== "" ? true : false}
             helperText={errorTexts.roi}
             onBlur={validationHandler}
           />
@@ -224,7 +228,7 @@ export const FactsForm = () => {
             label="Infalation"
             defaultValue={inf}
             inputRef={infRef}
-            error={errorTexts.inf != "" ? true : false}
+            error={errorTexts.inf !== "" ? true : false}
             helperText={errorTexts.name}
             onBlur={validationHandler}
           />
